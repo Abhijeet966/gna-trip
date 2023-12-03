@@ -1,23 +1,214 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Container from "./component/Container";
+import { useState, useEffect } from "react";
+const data = [
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Hotel Alpha",
+    location: "City X",
+    review: 4.2,
+    category_type: "Tours",
+    free_cancellation: true,
+    amount: 120,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Resort Beta",
+    location: "City Y",
+    review: 4.8,
+    category_type: "Attractions",
+    free_cancellation: false,
+    amount: 200,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Historical Tours Mu",
+    location: "City G",
+    review: 4.3,
+    category_type: "Tours",
+    free_cancellation: false,
+    amount: 110,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Amusement Park Nu",
+    location: "City H",
+    review: 4.5,
+    category_type: "Attractions",
+    free_cancellation: true,
+    amount: 180,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Mountain Retreat Xi",
+    location: "City J",
+    review: 4.7,
+    category_type: "Outdoor Activities",
+    free_cancellation: true,
+    amount: 160,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Concert Venue Omicron",
+    location: "City K",
+    review: 4.4,
+    category_type: "Concert and Shows",
+    free_cancellation: false,
+    amount: 90,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Hotel Alpha",
+    location: "City X",
+    review: 4.2,
+    category_type: "Tours",
+    free_cancellation: true,
+    amount: 120,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Resort Beta",
+    location: "City Y",
+    review: 4.8,
+    category_type: "Attractions",
+    free_cancellation: false,
+    amount: 200,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Historical Tours Mu",
+    location: "City G",
+    review: 4.3,
+    category_type: "Tours",
+    free_cancellation: false,
+    amount: 110,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Amusement Park Nu",
+    location: "City H",
+    review: 4.5,
+    category_type: "Attractions",
+    free_cancellation: true,
+    amount: 180,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Hotel Alpha",
+    location: "City X",
+    review: 4.2,
+    category_type: "Tours",
+    free_cancellation: true,
+    amount: 120,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Resort Beta",
+    location: "City Y",
+    review: 4.8,
+    category_type: "Attractions",
+    free_cancellation: false,
+    amount: 200,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Historical Tours Mu",
+    location: "City G",
+    review: 4.3,
+    category_type: "Tours",
+    free_cancellation: false,
+    amount: 110,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Amusement Park Nu",
+    location: "City H",
+    review: 4.5,
+    category_type: "Attractions",
+    free_cancellation: true,
+    amount: 180,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Mountain Retreat Xi",
+    location: "City J",
+    review: 4.7,
+    category_type: "Outdoor Activities",
+    free_cancellation: true,
+    amount: 160,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Concert Venue Omicron",
+    location: "City K",
+    review: 4.4,
+    category_type: "Concert and Shows",
+    free_cancellation: false,
+    amount: 90,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Luxury Hotel Alpha",
+    location: "City P",
+    review: 4.5,
+    category_type: "Luxury Tours",
+    free_cancellation: true,
+    amount: 300,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Beach Resort Delta",
+    location: "City Q",
+    review: 4.2,
+    category_type: "Beach Resorts",
+    free_cancellation: false,
+    amount: 250,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Wildlife Safari Epsilon",
+    location: "City R",
+    review: 4.8,
+    category_type: "Safari Tours",
+    free_cancellation: true,
+    amount: 350,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Skydiving Adventure Zeta",
+    location: "City S",
+    review: 4.6,
+    category_type: "Adventure Activities",
+    free_cancellation: true,
+    amount: 180,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Historic Mansion Theta",
+    location: "City T",
+    review: 4.3,
+    category_type: "Historical Tours",
+    free_cancellation: false,
+    amount: 220,
+  },
+  {
+    image_url: "https://picsum.photos/seed/picsum/200/300",
+    place_name: "Concert Plaza Kappa",
+    location: "City U",
+    review: 4.7,
+    category_type: "Music Concerts",
+    free_cancellation: true,
+    amount: 120,
+  },
+];
 
 function App() {
+  const [list, setList] = useState(data);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Container list={list} />
     </div>
   );
 }
