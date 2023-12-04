@@ -174,7 +174,8 @@ const data = [
     amount: 300,
   },
   {
-    image_url: "https://picsum.photos/seed/picsum/200/300",
+    image_url:
+      "https://images.unsplash.com/photo-1535827841776-24afc1e255ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fGhvdGVsfGVufDB8fDB8fHww",
     place_name: "Beach Resort Delta",
     location: "City Q",
     review: 4.2,
@@ -183,7 +184,8 @@ const data = [
     amount: 250,
   },
   {
-    image_url: "https://picsum.photos/seed/picsum/200/300",
+    image_url:
+      "https://images.unsplash.com/photo-1567197427669-a0d3603a3586?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTF8fGhvdGVsfGVufDB8fDB8fHww",
     place_name: "Wildlife Safari Epsilon",
     location: "City R",
     review: 4.8,
@@ -192,7 +194,8 @@ const data = [
     amount: 350,
   },
   {
-    image_url: "https://picsum.photos/seed/picsum/200/300",
+    image_url:
+      "https://images.unsplash.com/photo-1614568112072-770f89361490?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA0fHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
     place_name: "Skydiving Adventure Zeta",
     location: "City S",
     review: 4.6,
@@ -201,7 +204,8 @@ const data = [
     amount: 180,
   },
   {
-    image_url: "https://picsum.photos/seed/picsum/200/300",
+    image_url:
+      "https://picsum.photos/seed/picsum/200/300https://images.unsplash.com/photo-1561501878-aabd62634533?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAzfHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
     place_name: "Historic Mansion Theta",
     location: "City T",
     review: 4.3,
@@ -210,7 +214,8 @@ const data = [
     amount: 220,
   },
   {
-    image_url: "https://picsum.photos/seed/picsum/200/300",
+    image_url:
+      "https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEzfHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
     place_name: "Concert Plaza Kappa",
     location: "City U",
     review: 4.7,
@@ -219,7 +224,8 @@ const data = [
     amount: 120,
   },
   {
-    image_url: "https://picsum.photos/seed/picsum/200/300",
+    image_url:
+      "https://images.unsplash.com/photo-1537833633404-f02da1734a6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxob3RlbHxlbnwwfHwwfHx8MA%3D%3D",
     place_name: "Wildlife Safari Epsilon",
     location: "City R",
     review: 4.8,
