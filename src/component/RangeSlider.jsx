@@ -3,7 +3,7 @@ import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
 const RangeSlider = () => {
-  const [sliderValues, setSliderValues] = React.useState([250, 750]);
+  const [sliderValues, setSliderValues] = React.useState([0, 750]);
 
   const handleSliderChange = (values) => {
     setSliderValues(values);
@@ -20,7 +20,7 @@ const RangeSlider = () => {
         step={1}
         range
         value={sliderValues}
-        onChange={handleSliderChange}
+        onChange={handleSliderChange} style={{width:"80%"}}
       />
     </div>
   );

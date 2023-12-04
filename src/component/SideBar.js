@@ -1,23 +1,26 @@
 import React from "react";
 import RangeSlider from "./RangeSlider";
 import "../styles/SideBar.css";
-function SideBar() {
+function SideBar(props) {
+  console.log(props)
   return (
     <div>
       <div className="Category1">
         <h6>Category Types</h6>
-        <input type="checkbox" id="Tour" name="Tour" />
+        <input type="checkbox" id="Tour" name="Tour" value="Tours" onChange={props.handleCheck} />
         <label for="Tour">Tour</label>
         <br />
-        <input type="checkbox" id="Attractions" />
-        <label for="Attractions">Attractions</label>
+        <input type="checkbox" id="attraction" name="attraction" value="attraction"  onChange={props.handleCheck} />
+        <label for="attraction">Attractions</label>
         <br />
-        <input type="checkbox" id="Day Tips" />
-        <label for="Day Tips">Day Tips</label>
+        <input type="checkbox" id="Daytrips" name="Daytrips" value="Daytrips"  onChange={props.handleCheck} />
+        <label for="Daytrips">Day Tips</label>
         <br />
-        <input type="checkbox" id="Outdoor Activites" />
-        <label for="Outdoor Activites">Outdoor Activites</label>
+        <input type="checkbox" id="outdoor" name="outdoor" value="outdoor"  onChange={props.handleCheck} />
+        <label for="outdoor">Outdoor Activites</label>
         <br />
+        <input type="checkbox" id="consershow"  name="consershow" value="consershow"  onChange={props.handleCheck}/>
+        <label for="consershow">Concert & Shows</label>
         <div className="Others">
           <h6>Others</h6>
           <input type="checkbox" id="Free Cancelations" />

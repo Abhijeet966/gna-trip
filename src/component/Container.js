@@ -18,11 +18,11 @@ function Container(props) {
       </div>
       <div className="main-container">
         <div className="left-container">
-          <SideBar />
+          <SideBar handleCheck={props.handleCheck} />
         </div>
 
         <div className="right-container">
-          <Main list={props.list} />
+          <Main list={props.list}  />
         </div>
       </div>
       <div className="footer-container">

@@ -13,7 +13,7 @@ function Main(props) {
                 <img
                   src={data.image_url}
                   alt="Hotel Image"
-                  className="img-fluid"
+                  className="img-fluid" style={{height:"250px" ,width:"220px",borderRadius:"5px"}}
                 />
               </div>
               <div className="col-md-8 ig">

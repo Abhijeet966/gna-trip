@@ -2,7 +2,7 @@
     display: block;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 .rating {
     position: absolute;
