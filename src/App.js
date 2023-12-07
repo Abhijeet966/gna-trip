@@ -237,6 +237,11 @@ const data = [
 
 function App() {
   const [list, setList] = useState([]);
+  const [dataToshow, setDataToShow] = useState([]);
+  const [totalPage, setTotalPage] = useState(0);
+  const [currPage, setCurrPage] = useState(1);
+  const itemPerPage = 2;
+
   const [type, setType] = useState({
     Tours: false,
     attraction: false,
@@ -244,6 +249,7 @@ function App() {
     Daytrips: false,
     outdoor: false,
   });
+
   function handleCheck(e) {
     console.log("testing");
     let t = { ...type };
@@ -257,23 +263,50 @@ function App() {
     const ans = Object.keys(a).filter((e) => {
       return a[e] == true;
     });
-
     const tr = [...data];
-
     const newD = tr.filter((e) => {
       return ans.includes(e.category_type);
     });
     console.log(ans.length);
+
     if (ans.length != 0) {
       setList(newD);
+      setTotalPage(newD.length / itemPerPage);
     } else {
       setList(tr);
+      setTotalPage(Math.ceil(tr.length / itemPerPage));
     }
+    setCurrPage(1);
   }, [type]);
+
+  useEffect(() => {
+    const startIndex = (currPage - 1) * itemPerPage;
+    const endIndex = startIndex + itemPerPage;
+    const newDataToShow = list.slice(startIndex, endIndex);
+    setDataToShow(newDataToShow);
+  }, [currPage, list, type, totalPage]);
+
+  const handlePrev = () => {
+    if (currPage > 1) {
+      setCurrPage((prePage) => prePage - 1);
+    }
+  };
+  const handleNext = () => {
+    if (currPage < totalPage) {
+      setCurrPage((prePage) => prePage + 1);
+    }
+  };
 
   return (
     <div>
-      <Container list={list} handleCheck={handleCheck} />
+      <Container
+        list={dataToshow}
+        handleCheck={handleCheck}
+        next={handleNext}
+        prev={handlePrev}
+        currPage={currPage}
+        totalPage={totalPage}
+      />
     </div>
   );
 }

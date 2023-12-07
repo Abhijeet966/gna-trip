@@ -1,0 +1,85 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.Nav_Logo {
+  /* height: 25px;
+  width: 50px; */
+  height: 1.5625rem;
+  width: 3.125rem;
+  color: azure;
+  background-color: rgb(240, 82, 105);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.Nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 5px;
+}
+.Nav3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+.Nav3 p {
+  margin-left: 5px;
+}
+.Section_First {
+  background-color: darkblue;
+}
+
+.Section_First_Child1 {
+  display: flex;
+}
+.thunder {
+  height: 1.5625rem;
+  width: 1.0625rem;
+  border-radius: 40%;
+  background-color: pink;
+}
+.exchange {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.Section_First_Child2 {
+  display: flex;
+  justify-content: center;
+}
+.Section_First_Child2_GrandChild1 {
+  position: relative;
+  height: 50px;
+  width: 40%;
+  background-color: pink;
+}
+
+.Section_First_Child2_GrandChild2 {
+  position: absolute;
+  height: 50px;
+  width: 10%;
+  border-radius: 50%;
+  background-color: black;
+}
+.Section_First_Child2_GrandChild3 {
+  height: 50px;
+  width: 40%;
+  background-color: gray;
+}
+
+.Nav2 {
+  width: 40%;
+}

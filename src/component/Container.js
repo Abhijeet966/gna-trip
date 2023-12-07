@@ -7,7 +7,7 @@ import Footer from "./Footer.js";
 import SideBar from "./SideBar.js";
 import Main from "./Main.js";
 function Container(props) {
-  // console.log(props.list);
+  console.log(props.totalPage);
   return (
     <div className="container">
       <div>
@@ -22,8 +22,9 @@ function Container(props) {
         </div>
 
         <div className="right-container">
-          <Main list={props.list}  />
+          <Main list={props.list} next={props.next} prev={props.prev} currPage={props.currPage} totalPage={props.totalPage}/>
         </div>
+        
       </div>
       <div className="footer-container">
         <Subscriber />

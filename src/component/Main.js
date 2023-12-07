@@ -42,6 +42,10 @@ function Main(props) {
           </div>
         </div>
       ))}
+      <button onClick={props.prev} disabled={props.currPage===1}>prev</button>
+      <button>{props.currPage}</button>
+      <button onClick={props.next}  disabled={props.currPage===props.totalPage}>next</button>
+      
     </div>
   );
 }
